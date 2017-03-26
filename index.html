@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="public/styles/style.css">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px|Open+Sans|Roboto" rel="stylesheet">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -23,14 +23,16 @@
 				</g><!-- <text x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Anton Gajdosik</text><text x="0" y="120" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text> -->
 				</svg>
 			</div>
-			<h1>Zomato Sauce</h1>
-			<div class="tagline">Find restaurants based on rating</div>
+			<div class="titleWrapper">
+				<h1>Zomato Sauce</h1>
+				<div class="tagline">Find restaurants based on rating</div>
+			</div>
 			<form id="formUserInfo">
 				<input class="input__textbox" id="location" type="text" size="50" placeholder="Enter Location" autocomplete="on" runat="server"/>
 				<input type="range" min="1" max="50" id="inputRating">
 				<div class="showRating">
-				<p id="ratingInfo">Minimum Rating:</p>
-				<p id="displayRatingVal">3</p>
+					<p id="ratingInfo">Minimum Rating:</p>
+					<p id="displayRatingVal">3</p>
 				</div>
 				<input class="input__submit" type="submit" id="submitUserInfo" value="FIND ME FOOD">
 			</form>
@@ -75,7 +77,7 @@
 </main>
 
 <footer>
-&copy; 2017 <a href="http://codedbyjessica.com" target="_blank">Jessica Zhang</a>, <a href="http://courtneylabog.com/" target="_blank">Courtney Labog</a>, <a href="http://www.julescode.com/" target="_blank">Jules Garcia</a> | API Powered by Zomato, Google Maps | <a href="https://twitter.com/intent/tweet?text=I've%20been%20finding%20restaurants%20near%20me%20using%20http%3A%2F%2F!!!URLHERE!!!%20developed%20by%20@codedbyjessica%20@courtney_labog%20@Jules_gp" target="_blank">Share on Twitter</a>
+&copy; 2017 <a href="http://codedbyjessica.com" target="_blank">Jessica Zhang</a>, <a href="http://courtneylabog.com/" target="_blank">Courtney Labog</a>, <a href="http://www.julescode.com/" target="_blank">Jules Garcia</a> | API Powered by Zomato, Google Maps | <a href="https://twitter.com/intent/tweet?text=I've%20been%20finding%20restaurants%20near%20me%20using%20http://codedbyjessica.com/zomatosauce/%20developed%20by%20@codedbyjessica%20@courtney_labog%20@Jules_gp" target="_blank">Share on Twitter</a>
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
