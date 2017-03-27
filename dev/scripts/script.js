@@ -8,6 +8,8 @@ zomatoApp.inputUserRating = 0;
 zomatoApp.restoLatitude = "";
 zomatoApp.restoLongitude = "";
 
+console.log("inputlocationname", zomatoApp.inputLocationName)
+
 // zomatoApp.tenRestaurants = [];
 // zomatoApp.markers = [];
 
@@ -275,13 +277,18 @@ zomatoApp.getRatingInput = function(number){
 zomatoApp.getUserInfo = function(){
     $('#formUserInfo').on('submit', function(e){
         e.preventDefault();
-        $("#loadingMap").fadeIn();   
-        $('html, body').animate({
-            scrollTop: $("#loadingMap").offset().top
-        }, 500);
-        zomatoApp.inputUserRating = zomatoApp.getRatingInput($('#inputRating').val());
-        zomatoApp.getRestaurants(zomatoApp.inputLatitude, zomatoApp.inputLongitude, zomatoApp.inputUserRating);
-        zomatoApp.displayResults(zomatoApp.inputLocationName);
+
+        if(zomatoApp.inputLocationName !== "") {
+			$("#loadingMap").fadeIn();   
+			$('html, body').animate({
+				scrollTop: $("#loadingMap").offset().top
+			}, 500);
+        	zomatoApp.inputUserRating = zomatoApp.getRatingInput($('#inputRating').val());
+        	zomatoApp.getRestaurants(zomatoApp.inputLatitude, zomatoApp.inputLongitude, zomatoApp.inputUserRating);
+        	zomatoApp.displayResults(zomatoApp.inputLocationName);
+        } else{
+        	alert("Please input a location.")
+        }
     });
 }
 
